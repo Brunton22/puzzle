@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+    <!--<div class="navbar-header">
+        <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+    </div>-->
+
+    <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+    <ul class="nav navbar-nav">
+        <!--<li><a href="/nerds">Nerds</a></li>-->
+        <li><a class='' href="/">Back</a></li>
+    </ul>
+</nav>
+<div class='jumbotron text-center main-body'>{{ rs_sum }}</div>
+<input type="text" class="form-control input-lg text-center" placeholder="Insert Country Name" ng-model="formData.text" ng-disabled=disable>
+<button class='btn next_q-btn' ng-click='check_answer()'>Am I Right?</button>
+<div ng-class='correct_answer' class='correct-answer alert-success alert'>{{ congrats }}</div>
+<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>Wrong Answer. Game Over!<button class='restart-game-btn' ng-click='create_new_game()'>Restart Game</button></div>
+<!--<div class='row' style='background-color: white'>
+	<div id="{{ name.id }}" class='col-md-6 number-squares' ng-click='check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
+</div> -->
+<div>Score : {{ score }}</div>
+<div ng-class="dynamichide">Level : {{ level }}</div>
+<div></div>
+<!--<button class='btn next_q-btn' ng-show="next_q" ng-click='create_game()'>Next Question</button>-->

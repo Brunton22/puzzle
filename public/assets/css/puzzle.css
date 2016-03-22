@@ -1,0 +1,54 @@
+body {
+	background-image: url('../imgs/small_steps.png');
+}
+
+.main-body {
+	margin-top: 10%;
+	font-size: 18px;
+}
+.number-squares {
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+	height: 50%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.next_q-btn {
+	float: right;
+}
+
+.dynamichide {
+	display: none;
+}
+
+.dynamicshow {
+	display: block;
+}
+
+.mp-btn {
+	display: block;
+	margin: 0 auto 15px auto;
+	width: 350px;
+	background-color: #eee;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+.mp-btn:hover {
+	border-color: gray;
+	color: gray;
+}
+
+.correct-answer {
+	width: 50%;
+}
+
+.wrong-answer {
+	width: 50%;
+}
+
+.restart-game-btn {
+	float: right;
+}

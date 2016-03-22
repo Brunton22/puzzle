@@ -1,0 +1,1 @@
+angular.module('puzzleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'mathCtrl', 'CountryAnagramCtrl', 'NerdService']);
