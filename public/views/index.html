@@ -1,8 +1,10 @@
 <!-- public/index.html -->
 <!doctype html>
-<html lang="en">
+<!--<html lang="en">-->
 <head>
-    <meta charset="UTF-8">
+    <!--<meta charset="UTF-8">-->
+    <!--<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">-->
     <base href="/">
 
     <title>Your home for puzzles!</title>
@@ -10,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="assets/css/hover-min.css">
     <link rel="stylesheet" href="assets/css/puzzle.css">
     <link rel="stylesheet" href="../css/style.css"> <!-- custom styles -->
 
@@ -26,7 +29,7 @@
     <script src="js/appRoutes.js"></script>
     <script src="js/app.js"></script>
 </head>
-<body ng-app="puzzleApp" ng-controller="NerdController">
+<body ng-app="puzzleApp" ng-controller="MainController">
 <div class="container">
 
     <!-- HEADER -->
@@ -43,7 +46,7 @@
     </nav> -->
 
     <!-- ANGULAR DYNAMIC CONTENT -->
-    <div ng-view></div>
+    <div class='body-container' ng-view></div>
 
 </div>
 </body>

@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var favicon = require('serve-favicon');
 
 //configuration
 
@@ -22,6 +23,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/assets/imgs/small_steps.png'));
 
 //routes
 require('./app/routes')(app);

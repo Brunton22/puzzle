@@ -2,7 +2,7 @@ var app = angular.module('MainCtrl', []).controller('MainController', ['$scope',
 
 	$scope.tagline = 'Puzzles!';
 
-
+	$scope.back_btn = 'dynamichide';
 
 	$scope.start_game = function() {
 		$location.path('/math');

@@ -76,6 +76,7 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 			$scope.score = 0;
 			$scope.disable = true;
 		}
+	
 	}
 
 	$scope.remove_complete = function(data) {
@@ -85,6 +86,12 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 		$scope.quiz_array.splice(i, 1);
 		}
 	};
+
+	$scope.enter_press = function(keyEvent) {
+		if (keyEvent.which === 13){
+    		$scope.check_answer();
+    	}
+	}
 
 	if ( $routeParams.game == 'country') {
 		$scope.array = country_list;
@@ -100,5 +107,4 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 		$scope.array = eft_list;
 		$scope.create_game($scope.array);
 	}
-
 }]);

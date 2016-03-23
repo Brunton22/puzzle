@@ -1,16 +1,11 @@
 <nav class="navbar navbar-inverse">
-    <!--<div class="navbar-header">
-        <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
-    </div>-->
-
-    <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
     <ul class="nav navbar-nav">
-        <!--<li><a href="/nerds">Nerds</a></li>-->
-        <li><a class='' href="/">Back</a></li>
+        <li class='logo'></li>
+        <li ng-class='back_btn'><a href="/">Back</a></li>
     </ul>
 </nav>
 <div class='jumbotron text-center main-body'>{{ rs_sum }}</div>
-<input type="text" class="form-control input-lg text-center" placeholder="Insert Country Name" ng-model="formData.text" ng-disabled=disable>
+<input type="text" class="form-control input-lg text-center" placeholder="Insert Country Name" ng-keypress="enter_press($event)"ng-model="formData.text" ng-disabled=disable>
 <button class='btn next_q-btn' ng-click='check_answer()'>Am I Right?</button>
 <div ng-class='correct_answer' class='correct-answer alert-success alert'>{{ congrats }}</div>
 <div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>Wrong Answer. Game Over!<button class='restart-game-btn' ng-click='create_new_game()'>Restart Game</button></div>

@@ -1,31 +1,12 @@
-<!--<div class='jumbotron text-center'>-->
-	<!--<h1>Home Page</h1>
-
-	<p>{{ tagline }}</p>-->
-
-	<!--<form>
-		<div class='form-group'>
-			<input type='text' class='form-control input-lg text-center test' placeholder='insert name here' ng-model='formData.text'>
-			<input type='number' class='form-control input-lg text-center' placeholer='insert score here' ng-model='formData.value'>
-		</div>
-		<button type="submit" class='btn btn-primary btn-lg' ng-click="create_score()">Create Score</button>
-	</form>-->
-	<nav class="navbar navbar-inverse">
-        <!--<div class="navbar-header">
-            <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
-        </div>-->
-
-        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
-        <ul class="nav navbar-nav">
-            <!--<li><a href="/nerds">Nerds</a></li>-->
-            <li><a href="/">Back</a></li>
-        </ul>
-    </nav>
-	<div class='jumbotron text-center main-body'>{{ sum }}</div>
-	<div class='row' style='background-color: white'>
-		<div id="{{ name.id }}" class='col-md-6 number-squares' ng-click='!IsClickEnable||check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
-	</div>
-	<div>Time : {{ counter }} Score : {{ score }} Level : {{ level }}</div>
-	<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>{{ alert }}</div>
-	<!--<button class='btn next_q-btn' ng-show="next_q" ng-click='create_game()'>Next Question</button> -->
-<!-- </div> -->
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class='logo'></li>
+        <li ng-class='back_btn'><a href="/">Back</a></li>
+    </ul>
+</nav>
+<div class='jumbotron text-center main-body'>{{ sum }}</div>
+<div class='row' style='background-color: white'>
+	<div id="{{ name.id }}" class='col-md-6 number-squares' ng-click='!IsClickEnable||check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
+</div>
+<div>Time : {{ counter }} Score : {{ score }} Level : {{ level }}</div>
+<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>{{ alert }}</div>
