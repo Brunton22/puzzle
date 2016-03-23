@@ -3,19 +3,18 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var mongoose = require('mongoose');
 var favicon = require('serve-favicon');
 
 //configuration
 
 //configfiles
-var db = require('./config/db');
+//var db = require('./config/db');
 
 //set port
 var port = process.env.PORT || 8080;
 
 //connect to mongo database
-mongoose.connect(db.url);
+//mongoose.connect(db.url);
 
 //get all data of the (POST) parameters
 app.use(bodyParser.json());

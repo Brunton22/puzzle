@@ -1,5 +1,5 @@
 //Grabs nerd model in models/nerd.js
-var Nerd = require('./models/nerd')
+//var Nerd = require('./models/nerd')
 
 module.exports = function(app) {
 
