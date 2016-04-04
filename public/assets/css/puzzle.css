@@ -1,11 +1,19 @@
-body {
+html, body {
 	background: ##a0afab;
-	background-image: url("../imgs/ZenBG-1.png"), url("../imgs/ZenBG-2.png");
-	background-repeat: repeat-x, repeat;
+	/*background-image: url("../imgs/ZenBG-1.png"), url("../imgs/ZenBG-2.png");*/
+	background-image: url('../imgs/geometry2.png');
+	/*background-repeat: repeat-x, repeat;*/
+	height: 100%;
+}
+
+/*main page*/
+
+.container {
+	height: 100%;
 }
 
 .main-body {
-	margin-top: 10%;
+	margin-top: 70px;
 	font-size: 18px;
 	border-radius: 40px;
 	min-width: 375px;
@@ -15,42 +23,33 @@ body {
 	margin: 0;
 }
 
+.menu-title {
+	font-family: 'Shadows Into Light', cursive;
+	color: white;
+	margin-top: 15px; 
+}
+
+.puzzle-down {
+	padding-left: 15px;
+}
+
 .logo {
 	background-image: url('../imgs/pzzls-logo.png');
     width: 44px;
     height: 38px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 4px;
-}
-
-.jumbotron {
-	font-size: 30px;
+    background-repeat: no-repeat;
 }
 
 .header {
 	margin-bottom: 15px;
-}
-.number-squares {
-	border-style: solid;
-	border-width: 1px;
-	text-align: center;
-	height: 50%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 56px;
 }
 
-.next_q-btn {
-	float: right;
-	margin-top: 5px;
-    border: 1px solid;
-}
-
-.dynamichide {
-	display: none;
-}
-
-.dynamicshow {
-	display: block;
+.sub-head {
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .mp-btn {
@@ -58,15 +57,54 @@ body {
 	display: block;
 	margin: 0 auto 15px auto;
 	width: 350px;
-	/*background-color: #eee;*/
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
+	background-color: white;
+	font-family: 'Source Sans Pro', sans-serif;
 }
-/*.mp-btn:hover {
-	border-color: gray;
-	color: gray;
-}*/
+
+.mp-footer {
+	margin: auto;
+	font-size: 10px;
+}
+
+.jumbotron {
+	font-size: 30px;
+	background-color: white;
+}
+
+.puzzle-down {
+	display: none;
+}
+
+/*puzzle pages*/
+
+.back-btn>a {
+	color: black;
+}
+.back-btn>a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.back-btn {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	float: right;
+}
+
+.number-squares {
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+	height: 50%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: white;
+}
 
 .correct-answer {
 	width: 50%;
@@ -78,4 +116,30 @@ body {
 
 .restart-game-btn {
 	float: right;
+}
+
+
+/*anagram page*/
+
+.anagram-btns {
+	float: right;
+	margin-top: 5px;
+    border: 1px solid;
+    margin-right: 5px;
+}
+
+/*hide/show/misc*/
+
+.hide {
+	display: none;
+}
+
+/*angular class*/
+
+.dynamichide {
+	display: none;
+}
+
+.dynamicshow {
+	display: block;
 }

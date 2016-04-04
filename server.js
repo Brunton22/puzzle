@@ -22,7 +22,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
-app.use(favicon(__dirname + '/public/assets/imgs/small_steps.png'));
+app.use(favicon(__dirname + '/public/assets/imgs/pzzls-logo.png'));
 
 //routes
 require('./app/routes')(app);

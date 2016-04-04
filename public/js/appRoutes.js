@@ -14,7 +14,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'NerdController'
 		})
 
-		.when('/math', {
+		.when('/math/:game', {
 			templateUrl: 'views/math.html',
 			controller: 'mathController'
 		})

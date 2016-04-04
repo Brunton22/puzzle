@@ -1,7 +1,8 @@
-angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout', function($scope, $timeout) {
+angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout', '$routeParams', '$location', function($scope, $timeout, $routeParams, $location) {
 
 	$scope.score = 0;
 	$scope.counter = 5;
+	$scope.back_btn = 'dynamicshow';
 
 	$scope.onTimeout = function(){
 
@@ -16,6 +17,14 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 
 	var mytimeout = $timeout($scope.onTimeout,1000);
 
+	$scope.create_new_game = function() {
+
+		$scope.score = 0;
+		$scope.counter = 5;
+		$scope.create_game();
+		var mytimeout = $timeout($scope.onTimeout,1000);
+	}
+
 
 	$scope.create_game = function() {
 
@@ -26,20 +35,44 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 		//create numbers
 		var number = [];
 
-		if ( $scope.score <= 10 ) {
+		if ( $scope.score <= 15 ) {
 			$scope.level = 'Level 1';
 
 			for(var i = 2; i <= 10; i++) {
 				number.push(i);
-			}
+			};
 		}
 
 		else if ( $scope.score <= 25 ) {
 			$scope.level = 'Level 2';
 
-			for(var i = 2; i <= 100; i++) {
+			for(var i = 2; i <= 20; i++) {
 				number.push(i);
-			}
+			};
+		}
+
+		else if ( $scope.score <= 35 ) {
+			$scope.level = 'Level 3';
+
+			for(var i = 2; i <= 30; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 40 ) {
+			$scope.level = 'Level 4';
+
+			for(var i = 2; i <= 35; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 50 ) {
+			$scope.level = 'Level 5';
+
+			for(var i = 2; i <= 40; i++) {
+				number.push(i);
+			};
 		}
 
 		else {
@@ -47,8 +80,8 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 
 			for(var i = 2; i <= 300; i++) {
 				number.push(i);
-			}
-		}
+			};
+		};
 
 		var rand1 = number[Math.floor(Math.random() * number.length)];
 		var rand2 = number[Math.floor(Math.random() * number.length)];
@@ -64,41 +97,153 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 			{ number : rand4 }
 		];
 
-		var math_num = numbers[Math.floor(Math.random() * numbers.length)];
+		//create multiply game
 
-		//divide array to get divider
-		var divider_array = [];
+		if ( $routeParams.game == 'multi') {
 
-		for(var i = 2; i<=math_num.number; i++){
-			divider_array.push(i);
-		}
+			var math_num = numbers[Math.floor(Math.random() * numbers.length)];
 
-		create_divide_multi();
+			//divide array to get divider
+			var divider_array = [];
 
-		function create_divide_multi() {
-
-			//create multiplier(this is where we perform the integer check)
-			do {
-
-				var divider = divider_array[Math.floor(Math.random() * divider_array.length)];
-				var multiplier = math_num.number / divider;
+			for(var i = 2; i<=math_num.number; i++){
+				divider_array.push(i);
 			}
 
-			while ( multiplier != parseInt(multiplier) );
+			create_divide_multi();
 
-			create_answer(divider, multiplier);
+			function create_divide_multi() {
 
-		};
+				//create multiplier(this is where we perform the integer check)
+				do {
 
-		//create answer
+					var divider = divider_array[Math.floor(Math.random() * divider_array.length)];
+					var multiplier = math_num.number / divider;
+				}
 
-		function create_answer(divider, multiplier) {
+				while ( multiplier != parseInt(multiplier) );
 
-				var answer = divider * multiplier;
+				create_answer(divider, multiplier);
+
+			};
+
+			//create answer
+
+			function create_answer(divider, multiplier) {
+
+					var answer = divider * multiplier;
+					//create sum
+					$scope.sum = divider + '*' + multiplier;
+					$scope.answer = answer;
+
+			}
+		}
+
+		//create division game
+
+		else if ( $routeParams.game == 'divide') {
+
+			var math_num = numbers[Math.floor(Math.random() * numbers.length)];
+
+			//divide array to get divider
+			var multi_array = [];
+
+			for(var i = 2; i<=math_num.number; i++){
+				multi_array.push(i);
+			}
+
+			create_divide_multi();
+
+			function create_divide_multi() {
+
+				//create multiplier(this is where we perform the integer check)
+				do {
+
+					var multiplier = multi_array[Math.floor(Math.random() * multi_array.length)];
+					var divider = math_num.number * multiplier;
+				}
+
+				while ( divider != parseInt(divider) );
+
+				create_answer(multiplier, divider);
+
+			};
+
+			//create answer
+
+			function create_answer(multiplier, divider) {
+					console.log(multiplier);
+					console.log(divider);
+					var answer = divider / multiplier;
+					//create sum
+					$scope.sum = divider + '/' + multiplier;
+					$scope.answer = answer;
+					console.log(answer);
+
+			}
+		}
+
+		//create addition game
+
+		else if ( $routeParams.game == 'add') {
+
+			create_subtracter();
+
+			function create_subtracter() {
+
+				var math_num_a = numbers[Math.floor(Math.random() * numbers.length)];
+				var math_num = math_num_a.number;
+				var math_num_1 = number[Math.floor(Math.random() * number.length)];
+				var subtracter = math_num - math_num_1;
+
+				if ( subtracter < 1 ) {
+
+					create_subtracter();
+				}
+
+				else {
+					create_add_answer(math_num_1, subtracter);
+				}
+			}
+
+			function create_add_answer(math_num_1, subtracter) {  console.log('1');
+
+				var answer = math_num_1 + subtracter
 				//create sum
-				$scope.sum = divider + '*' + multiplier;
+				$scope.sum = math_num_1 + '+' + subtracter;
 				$scope.answer = answer;
+			}
+		}
 
+		//create subtraction game
+
+		else if ( $routeParams.game == 'sub' ) {
+
+			create_addition();
+
+			function create_addition() {
+
+				var math_num_a = numbers[Math.floor(Math.random() * numbers.length)];
+				var math_num = math_num_a.number;
+				var math_num_1 = number[Math.floor(Math.random() * number.length)]; 3
+				var addition = math_num + math_num_1;
+
+				if ( addition < 1 ) {
+
+					create_addition();
+				}
+
+				else {
+					create_answer(math_num, math_num_1, addition);
+				}
+			}
+
+			function create_answer(math_num, math_num_1, addition) {
+				var answer = math_num;
+				//create sum
+				$scope.sum = addition + '-' + math_num_1;
+				$scope.answer = answer;
+			}
 		}
 
 		//put numbers into maths.html
@@ -128,6 +273,10 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 
 	$scope.try_again = function() {
 		alert('Click Restart Game to start again.');
+	}
+
+	$scope.go_back = function() {
+		$location.path('/');
 	}
 
 	$scope.create_game();

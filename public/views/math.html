@@ -1,12 +1,13 @@
 <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
         <li class='logo'></li>
-        <li ng-class='back_btn'><a href="/">Back</a></li>
+        <li class='menu-title'>Puzzles!</li>
     </ul>
 </nav>
+<button ng-class='back_btn' ng-click='go_back()' class='btn hvr-fade back-btn'>Back</button>
 <div class='jumbotron text-center main-body'>{{ sum }}</div>
-<div class='row' style='background-color: white'>
+<div class='row'>
 	<div id="{{ name.id }}" class='col-md-6 number-squares' ng-click='!IsClickEnable||check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
 </div>
-<div>Time : {{ counter }} Score : {{ score }} Level : {{ level }}</div>
-<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>{{ alert }}</div>
+<div class='score-info math-info'>Time : {{ counter }} Score : {{ score }} Level : {{ level }}</div>
+<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>{{ alert }}<button class='restart-game-btn' ng-click='create_new_game()'>Restart Game</button></div>

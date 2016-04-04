@@ -1,18 +1,16 @@
 <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
         <li class='logo'></li>
-        <li ng-class='back_btn'><a href="/">Back</a></li>
+        <li class='menu-title'>Puzzles!</li>
     </ul>
 </nav>
+<button ng-class='back_btn' ng-click='go_back()' class='btn hvr-fade back-btn'>Back</button>
 <div class='jumbotron text-center main-body'>{{ rs_sum }}</div>
-<input type="text" class="form-control input-lg text-center" placeholder="Insert Country Name" ng-keypress="enter_press($event)"ng-model="formData.text" ng-disabled=disable>
-<button class='btn next_q-btn' ng-click='check_answer()'>Am I Right?</button>
-<div ng-class='correct_answer' class='correct-answer alert-success alert'>{{ congrats }}</div>
-<div ng-class='wrong_answer' class='wrong-answer alert alert-danger'>Wrong Answer. Game Over!<button class='restart-game-btn' ng-click='create_new_game()'>Restart Game</button></div>
-<!--<div class='row' style='background-color: white'>
-	<div id="{{ name.id }}" class='col-md-6 number-squares' ng-click='check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
-</div> -->
-<div>Score : {{ score }}</div>
+<input type="text" class="anagram-answer form-control input-lg text-center" placeholder="Insert {{placeholder}} Name" ng-keypress="enter_press($event)" ng-model="formData.text" ng-disabled=disable>
+<button class='btn give-up-btn anagram-btns hvr-fade' ng-click='give_up()'>Give Up? Reveal Answer</button>
+<button class='btn next-q-btn anagram-btns hvr-fade' ng-click='check_answer()'>Am I Right?</button>
+<div ng-class='correct_answer' class='correct-answer-anagram correct-answer alert-success alert'>{{ congrats }}</div>
+<div ng-class='wrong_answer' class='wrong-answer-anagram wrong-answer alert alert-danger'>{{ wrong_answer_anagram }}<button class='restart-game-btn' ng-click='create_new_game()'>Restart Game</button></div>
+<div class='anagram-info score-info'>Score : {{ score }}/{{ no_of_anagram }}</div>
 <div ng-class="dynamichide">Level : {{ level }}</div>
 <div></div>
-<!--<button class='btn next_q-btn' ng-show="next_q" ng-click='create_game()'>Next Question</button>-->
