@@ -28,6 +28,16 @@
 				<button id='country_btn' ng-repeat='button in ana_btns' class='btn mp-btn hvr-fade' ng-click='start_anagram_game(button.link)'>{{ button.name }}</button>
 			</div>
 		</div>
+		<div class='col-md-6'>
+			<h2 class='sub-head'>Odd One Out Puzzles<i ng-class='odd_caret' class='fa fa-2x puzzle-down' ng-click='drop_down("odd")'></i></h2>
+			<div ng-class="{hide: !odd_down, bounceIn: odd_down, bounceOut: !odd_down}" class='button-group animated odd-puzzle-btns'>
+					<!--<button id='country_btn' class='btn mp-btn hvr-fade' ng-click='start_anagram_game("country")'>Country Names</button>
+					<button id='state_btn' class='btn mp-btn hvr-fade' ng-click='start_anagram_game("state")'>State Names</button>
+					<button id='eft_btn' class='btn mp-btn hvr-fade' ng-click='start_anagram_game("eft")'>European Football Team Names</button>
+					<button id='eft_btn' class='btn mp-btn hvr-fade' ng-click='start_anagram_game("cars")'>Car Manufacturer Names</button>-->
+				<button id='odd_btn' ng-repeat='button in odd_btns' class='btn mp-btn hvr-fade' ng-click='start_odd_game(button.link)'>{{ button.name }}</button>
+			</div>
+		</div>
 	</div>
 	<div class='mp-footer'>Website Designed by <a href='http://www.graemebrunton.com'>Graeme Brunton</a> || Puzzle graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a></div>
 </div>

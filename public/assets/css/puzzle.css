@@ -13,7 +13,7 @@ html, body {
 }
 
 .main-body {
-	margin-top: 70px;
+	margin-top: 30px;
 	font-size: 18px;
 	border-radius: 40px;
 	min-width: 375px;
@@ -88,13 +88,14 @@ html, body {
 	text-decoration: none;
 }
 
-.back-btn {
-	border-width: 1px;
-	border-style: solid;
-	border-color: black;
-	font-family: 'Source Sans Pro', sans-serif;
-	float: right;
+.skip-btn {
+	float: right;	
 }
+
+.ssp {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 
 .number-squares {
 	border-style: solid;
@@ -121,11 +122,20 @@ html, body {
 
 /*anagram page*/
 
+.btn-border {
+	border: 1px solid;
+}
+
 .anagram-btns {
 	float: right;
 	margin-top: 5px;
-    border: 1px solid;
     margin-right: 5px;
+}
+
+/*ooo page*/
+
+.ooo-squares {
+	margin-top: 5px;
 }
 
 /*hide/show/misc*/

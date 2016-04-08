@@ -63,6 +63,9 @@ h1 {
 	display: none;
 }
 
+.odd-puzzle-btns {
+	display: none;
+}
 /*puzzle page*/
 
 .jumbotron {
@@ -75,12 +78,17 @@ h1 {
     font-size: 30px;
 }
 
+.skip-btn {
+	font-size: 30px;
+}
+
 .score-info {
 	font-size: 30px;
 }
 
 .restart-game-btn {
-	margin-top: -6px;
+	margin-top: 3px;
+	float: left;
 }
 
 /*math page*/
@@ -100,6 +108,8 @@ h1 {
 
 .wrong-answer-anagram {
 	width: 45%;
+	height: 8%;
+	margin-top: 5px;
 }
 
 .correct-answer{

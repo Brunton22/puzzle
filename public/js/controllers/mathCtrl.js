@@ -75,10 +75,50 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 			};
 		}
 
-		else {
-			$scope.level = 'Level 3';
+		else if ( $scope.score <= 50 ) {
+			$scope.level = 'Level 6';
 
-			for(var i = 2; i <= 300; i++) {
+			for(var i = 2; i <= 40; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 60 ) {
+			$scope.level = 'Level 7';
+
+			for(var i = 2; i <= 50; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 70 ) {
+			$scope.level = 'Level 8';
+
+			for(var i = 2; i <= 70; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 80 ) {
+			$scope.level = 'Level 9';
+
+			for(var i = 2; i <= 100; i++) {
+				number.push(i);
+			};
+		}
+
+		else if ( $scope.score <= 90 ) {
+			$scope.level = 'Level 10';
+
+			for(var i = 2; i <= 250; i++) {
+				number.push(i);
+			};
+		}
+
+		else {
+			$scope.level = 'No More Levels. Good Luck!';
+
+			for(var i = 2; i <= 500; i++) {
 				number.push(i);
 			};
 		};

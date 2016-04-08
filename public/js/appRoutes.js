@@ -9,11 +9,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
 		//nerds page
 
-		.when('/nerds', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
-		})
-
 		.when('/math/:game', {
 			templateUrl: 'views/math.html',
 			controller: 'mathController'
@@ -22,6 +17,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/anagram_game/:game', {
 			templateUrl: 'views/anagram_game.html',
 			controller: 'CountryAnagramController'
+		})
+
+		.when('/odd/:game', {
+			templateUrl: 'views/odd.html',
+			controller: 'oddController'
 		});
 
 	$locationProvider.html5Mode(true);

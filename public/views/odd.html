@@ -1,0 +1,13 @@
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class='logo'></li>
+        <li class='menu-title'>Puzzles!</li>
+    </ul>
+</nav>
+<button ng-class='back_btn' ng-click='go_back()' class='btn btn-border ssp hvr-fade back-btn'>Back</button>
+<div ng-class='dynamichide' class='ssp jumbotron text-center main-body'>{{ hint }}</div>
+<div class='row ooo-squares'>
+	<div class='col-md-6 ssp number-squares' ng-click='!IsClickEnable||check_answer(odd)' ng-repeat='odd in ooo_game_arr'>{{ odd }}</div>
+</div>
+<div class='score-info ssp math-info'>Time : {{ counter }} Score : {{ score }}</div>
+<div ng-class='wrong_answer' class='wrong-answer alert ssp alert-danger'>{{ alert }}<button class='restart-game-btn ssp' ng-click='create_game()'>Restart Game</button></div>

@@ -1,3 +1,46 @@
 html, body {
 	height: 100%;
 }
+
+.mp-btn {
+	height: 60px;
+	font-size: 25px;
+}
+
+.back-btn {
+	font-size: 20px;
+}
+
+.number-squares {
+	font-size: 25px;
+}
+
+.wrong-answer {
+	width: 80%;
+	font-size: 25px;
+}
+
+.wrong-answer-anagram {
+	width: 40%;
+}
+
+.correct-answer {
+	font-size: 25px;
+}
+
+.input-lg {
+	height: 60px;
+	font-size: 25px;
+}
+
+.score-info {
+	font-size: 25px;
+}
+
+.skip-btn {
+	font-size: 20px;
+}
+
+.anagram-btns {
+	font-size: 20px;
+}

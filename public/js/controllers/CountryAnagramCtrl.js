@@ -4,6 +4,7 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 	var state_list = ['alabama','alaska','arizona','arkansas','california','colorado','connecticut','delaware','florida','georgia','hawaii','idaho','illinois','indiana','iowa','kansas','kentucky','louisiana','maine','maryland','massachusetts','michigan','minnesota','mississippi','missouri','montana','nebraska','nevada','new hampshire','new jersey','new mexico','new york','north carolina','north dakota','ohio','oklahoma','oregon','pennsylvania','rhode island','south carolina','south dakota','tennessee','texas','utah','vermont','virginia','washington','west virginia','wisconsin','wyoming'];
 	var eft_list = ['atletico madrid','real madrid','barcelona','valencia','sevilla','juventus','roma','napoli','ac milan','bayern munich','borussia dortmund','hamburg','bayer leverkusen','ajax','psv eindhoven','az alkmaar','paris saint germain','lyon','marseille','manchester united','manchester city','liverpool','chelsea','arsenal','rangers','celtic','dundee united','aberdeen','porto','sporting gijon','real sociedad','dynamo kiev','dynamo moscow','fc copenhagen','zenit st petersburg','dinamo zagreb','fc zurich','anderlecht','red bull salzburg','bate borisov','standard liege','hajduk split','sparta prague','galatasaray','fenerbahce','monaco'];
 	var cars_list = ['ford', 'porsche', 'vauxhall', 'toyota', 'bmw', 'jaguar', 'nissan', 'honda', 'skoda', 'mazda', 'ferrari', 'mercedes benz', 'jeep', 'daihatsu', 'audi', 'volkswagen', 'alfa romeo', 'fiat', 'lamborghini', 'maserati', 'mitsubushi', 'suzuki', 'hyundai', 'kia', 'renault', 'volvo', 'aston martin', 'chrysler', 'chevrolet', 'cadillac', 'dodge', 'mustang'];
+	var tvshow_list = ['friends', 'breaking bad', 'the sopranos', 'mad men', 'the wire', 'arrested development', 'its always sunny in philadelphia', 'how i met your mother', 'cheers', 'happy days', 'the west wing', 'scrubs', 'the simpsons', 'family guy', 'south park', 'desperate housewives', 'true blood', 'the shield', 'sons of anarchy', 'gotham', 'heroes', '30 rock', 'fawlty towers', 'everybody loves raymond', 'arrow', 'true blood', 'alias', 'full house', 'doctor who', 'sherlock', 'taxi', 'house', 'the good wife', 'curb your enthusiasm', 'true detective', 'veep', 'homeland', 'downton abbey', 'frasier', 'friday night lights', 'dexter', 'star trek', 'parks and recreation', 'the office', 'six feet under', 'the walking dead', 'lost', 'modern family', 'seinfeld', 'game of thrones', 'extras'];
 
 	var completed = [];
 
@@ -88,6 +89,7 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 				$scope.wrong_answer = 'dynamicshow';
 				$scope.score = 0;
 				$scope.disable = true;
+				$scope.rs_sum = $scope.sum;
 			}
 		}
 	
@@ -107,6 +109,10 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 		$scope.score = 0;
 		$scope.disable = true;
 		$scope.rs_sum = $scope.sum;
+	}
+
+	$scope.skip_q = function() {
+		$scope.create_game();
 	}
 
 	$scope.enter_press = function(keyEvent) {
@@ -142,4 +148,10 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 		$scope.create_game($scope.array);
 		$scope.placeholder = 'Car';
 	}
+
+	else if ( $routeParams.game == 'tv' ) {
+		$scope.array = tvshow_list;
+		$scope.create_game($scope.array);
+		$scope.placeholder = 'TV Show';
+	}  
 }]);
