@@ -20,7 +20,7 @@ var app = angular.module('MainCtrl', []).controller('MainController', ['$scope',
 		{name:'Addition', link:'add'},
 		{name:'Subtraction', link:'sub'},
 		{name:'Division', link:'divide'},
-		{name:'Multiplication', link:'multi'},
+		{name:'Multiplication', link:'multi'}
 	]
 
 	$scope.ana_btns = [
@@ -28,7 +28,9 @@ var app = angular.module('MainCtrl', []).controller('MainController', ['$scope',
 		{name:'State Names', link:'state'},
 		{name:'European Football Team Names', link:'eft'},
 		{name:'Car Manufacturer Names', link:'cars'},
-		{name:'TV Show Names', link:'tv'}
+		{name:'TV Show Names', link:'tv'},
+		{name:'Academy Award Best Picture Films', link:'oscar_films'},
+		{name:'Fruit and Vegetables', link:'fruit_veg'}
 	]
 
 	$scope.odd_btns = [

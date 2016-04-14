@@ -87,8 +87,8 @@ h1 {
 }
 
 .restart-game-btn {
-	margin-top: 3px;
-	float: left;
+    float: left;
+    margin-right: 15px;
 }
 
 /*math page*/

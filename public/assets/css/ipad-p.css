@@ -44,3 +44,19 @@ html, body {
 .anagram-btns {
 	font-size: 20px;
 }
+
+.puzzle-down {
+	display: block;
+}
+
+.math-puzzle-btns {
+	display: none;
+}
+
+.anagram-puzzle-btns {
+	display: none;
+}
+
+.odd-puzzle-btns {
+	display: none;
+}

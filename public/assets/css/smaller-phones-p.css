@@ -1,3 +1,142 @@
 html, body {
 	height: 100%;
 }
+
+.container {
+	height: 100%;
+	width: 100%;
+}
+
+.body-container {
+	height: 100%;
+}
+
+.navbar {
+	height: 100px;
+}
+
+.logo {
+	margin-top: 29px;
+}
+
+.navbar-nav>li{
+	font-size: 35px;
+}
+
+.menu-title {
+	margin-top: 22px;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+.mp-btn {
+	width: 650px;
+	height: 150px;
+	font-size: 35px;
+	border-width: 2px;
+	margin-bottom: 10px;
+}
+
+.header {
+	font-size: 110px;
+}
+
+.sub-head {
+	font-size: 50px;
+}
+
+.mp-footer {
+	font-size: 20px;
+}
+
+.puzzle-down {
+	display: block;
+}
+
+.math-puzzle-btns {
+	display: none;
+}
+
+.anagram-puzzle-btns {
+	display: none;
+}
+
+.odd-puzzle-btns {
+	display: none;
+}
+/*puzzle page*/
+
+.jumbotron {
+	font-size: 45px;
+	margin-top: 100px;
+}
+
+.back-btn {
+	width: 10%;
+    font-size: 30px;
+}
+
+.skip-btn {
+	font-size: 30px;
+}
+
+.score-info {
+	font-size: 30px;
+}
+
+.restart-game-btn {
+    float: left;
+    margin-right: 15px;
+}
+
+/*math page*/
+
+.number-squares {
+	font-size: 40px;
+	margin-bottom: 10px;
+	width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.wrong-answer{
+	font-size: 35px;
+	width: 85%;
+}
+
+.wrong-answer-anagram {
+	width: 45%;
+	height: 8%;
+	margin-top: 5px;
+}
+
+.correct-answer{
+	font-size: 35px;
+	width: 80%;
+}
+
+.correct-answer-anagram {
+	width: 45%;
+}
+
+/*anagram page*/
+.anagram-answer {
+	height: 7%;
+	font-size: 40px;
+}
+
+.anagram-info {
+	margin-top: 15px;
+}
+
+.anagram-btns {
+    height: 4%;
+    width: 18%;
+    font-size: 25px;
+}
+
+.give-up-btn {
+	width: 300px;
+}

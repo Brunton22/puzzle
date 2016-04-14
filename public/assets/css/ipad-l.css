@@ -1,3 +1,19 @@
 html, body {
 	height: 100%;
 }
+
+.puzzle-down {
+	display: block;
+}
+
+.math-puzzle-btns {
+	display: none;
+}
+
+.anagram-puzzle-btns {
+	display: none;
+}
+
+.odd-puzzle-btns {
+	display: none;
+}

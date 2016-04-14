@@ -50,6 +50,7 @@ html, body {
 
 .sub-head {
 	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 40px;
 }
 
 .mp-btn {
@@ -117,6 +118,7 @@ html, body {
 
 .restart-game-btn {
 	float: right;
+	background-color: aliceblue;
 }
 
 
@@ -142,6 +144,10 @@ html, body {
 
 .hide {
 	display: none;
+}
+
+.display-block {
+	display: block;
 }
 
 /*angular class*/

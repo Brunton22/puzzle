@@ -212,14 +212,10 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 			//create answer
 
 			function create_answer(multiplier, divider) {
-					console.log(multiplier);
-					console.log(divider);
 					var answer = divider / multiplier;
 					//create sum
 					$scope.sum = divider + '/' + multiplier;
 					$scope.answer = answer;
-					console.log(answer);
-
 			}
 		}
 
@@ -246,7 +242,7 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 				}
 			}
 
-			function create_add_answer(math_num_1, subtracter) {  console.log('1');
+			function create_add_answer(math_num_1, subtracter) {
 
 				var answer = math_num_1 + subtracter
 				//create sum
@@ -289,27 +285,36 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 		//put numbers into maths.html
 		$scope.numbers = {number : numbers};
 
-		$scope.check_answer = function(user_ans) {
+		function remove_effect() {
+			$scope.sum_effect = '';
+			$scope.math_no_effect = '';
+		}
 
-			if ( user_ans == $scope.answer ) {
-				$scope.next_q = true;
-				$scope.score++;
-				$scope.counter = 5;
-				$scope.create_game();
-			}  
+		setTimeout(remove_effect, 750);
+	};
 
-			else {
-				$scope.alert = 'Game Over! Incorrect Answer!';
-				$scope.game_over();
-			}
-		};
+	$scope.check_answer = function(user_ans) {
 
-		$scope.game_over = function() {
-			$scope.wrong_answer = 'dynamicshow';
-			$timeout.cancel(mytimeout);
-			$scope.IsClickEnable = false;
+		if ( user_ans == $scope.answer ) {
+			$scope.next_q = true;
+			$scope.score++;
+			$scope.counter = 5;
+			$scope.sum_effect = 'slideInRight';
+			$scope.math_no_effect = 'zoomIn';
+			$scope.create_game();
+		}  
+
+	else {
+		$scope.alert = 'Game Over! Incorrect Answer!';
+		$scope.game_over();
 		}
 	};
+
+	$scope.game_over = function() {
+		$scope.wrong_answer = 'dynamicshow jello';
+		$timeout.cancel(mytimeout);
+		$scope.IsClickEnable = false;
+	}
 
 	$scope.try_again = function() {
 		alert('Click Restart Game to start again.');

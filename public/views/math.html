@@ -5,9 +5,9 @@
     </ul>
 </nav>
 <button ng-class='back_btn' ng-click='go_back()' class='btn ssp btn-border hvr-fade back-btn'>Back</button>
-<div class='jumbotron ssp text-center main-body'>{{ sum }}</div>
+<div class='jumbotron ssp text-center main-body'><span class='animated display-block' ng-class='sum_effect'>{{ sum }}</span></div>
 <div class='row'>
-	<div id="{{ name.id }}" class='ssp col-md-6 number-squares' ng-click='!IsClickEnable||check_answer(name.number)' ng-repeat='name in numbers.number'>{{ name.number }}</div>
+	<div id="{{ name.id }}" class='ssp col-md-6 number-squares' ng-click='!IsClickEnable||check_answer(name.number)' ng-repeat='name in numbers.number'><span class='animated display-block' ng-class='math_no_effect'>{{ name.number }}</span></div>
 </div>
 <div class='score-info ssp math-info'>Time : {{ counter }} Score : {{ score }} Level : {{ level }}</div>
-<div ng-class='wrong_answer' class='wrong-answer ssp alert alert-danger'>{{ alert }}<button class='restart-game-btn ssp' ng-click='create_new_game()'>Restart Game</button></div>
+<div ng-class='wrong_answer' class='wrong-answer ssp alert alert-danger animated'>{{ alert }}<button class='restart-game-btn ssp' ng-click='create_new_game()'>Restart Game</button></div>
