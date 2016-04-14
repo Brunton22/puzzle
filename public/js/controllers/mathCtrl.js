@@ -150,9 +150,9 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 				divider_array.push(i);
 			}
 
-			create_divide_multi();
+			create_divide_for_multi();
 
-			function create_divide_multi() {
+			function create_divide_for_multi() {
 
 				//create multiplier(this is where we perform the integer check)
 				do {
@@ -163,13 +163,13 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 
 				while ( multiplier != parseInt(multiplier) );
 
-				create_answer(divider, multiplier);
+				create_multi_answer(divider, multiplier);
 
 			};
 
 			//create answer
 
-			function create_answer(divider, multiplier) {
+			function create_multi_answer(divider, multiplier) {
 
 					var answer = divider * multiplier;
 					//create sum
@@ -192,9 +192,9 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 				multi_array.push(i);
 			}
 
-			create_divide_multi();
+			create_multi_for_divide();
 
-			function create_divide_multi() {
+			function create_multi_for_divide() {
 
 				//create multiplier(this is where we perform the integer check)
 				do {
@@ -205,13 +205,13 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 
 				while ( divider != parseInt(divider) );
 
-				create_answer(multiplier, divider);
+				create_divide_answer(multiplier, divider);
 
 			};
 
 			//create answer
 
-			function create_answer(multiplier, divider) {
+			function create_divide_answer(multiplier, divider) {
 					var answer = divider / multiplier;
 					//create sum
 					$scope.sum = divider + '/' + multiplier;
@@ -270,11 +270,11 @@ angular.module('mathCtrl', []).controller('mathController', ['$scope', '$timeout
 				}
 
 				else {
-					create_answer(math_num, math_num_1, addition);
+					create_sub_answer(math_num, math_num_1, addition);
 				}
 			}
 
-			function create_answer(math_num, math_num_1, addition) {
+			function create_sub_answer(math_num, math_num_1, addition) {
 				var answer = math_num;
 				//create sum
 				$scope.sum = addition + '-' + math_num_1;
