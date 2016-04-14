@@ -2,51 +2,16 @@ html, body {
 	height: 100%;
 }
 
+/*main page*/
+
 .mp-btn {
-	height: 60px;
+	height: 75px;
 	font-size: 25px;
+	width: 400px;
 }
 
-.back-btn {
-	font-size: 20px;
-}
-
-.number-squares {
-	font-size: 25px;
-}
-
-.wrong-answer {
-	width: 80%;
-	font-size: 25px;
-}
-
-.wrong-answer-anagram {
-	width: 40%;
-}
-
-.correct-answer {
-	font-size: 25px;
-}
-
-.input-lg {
-	height: 60px;
-	font-size: 25px;
-}
-
-.score-info {
-	font-size: 25px;
-}
-
-.skip-btn {
-	font-size: 20px;
-}
-
-.anagram-btns {
-	font-size: 20px;
-}
-
-.puzzle-down {
-	display: block;
+.header {
+	font-size: 100px;
 }
 
 .math-puzzle-btns {
@@ -59,4 +24,60 @@ html, body {
 
 .odd-puzzle-btns {
 	display: none;
+}
+
+.puzzle-down {
+	display: block;
+}
+
+.sub-head {
+	font-size: 40px;
+}
+
+/*all games*/
+
+.back-btn {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.wrong-answer {
+	width: 80%;
+	font-size: 25px;
+}
+
+.correct-answer {
+	font-size: 25px;
+}
+
+.score-info {
+	font-size: 25px;
+}
+
+/*math*/
+
+.number-squares {
+	font-size: 25px;
+}
+
+/*odd*/
+
+/*anagram*/
+
+.wrong-answer-anagram {
+	width: 50%;
+    height: 100px;
+}
+
+.input-lg {
+	height: 60px;
+	font-size: 25px;
+}
+
+.skip-btn {
+	font-size: 20px;
+}
+
+.anagram-btns {
+	font-size: 20px;
 }

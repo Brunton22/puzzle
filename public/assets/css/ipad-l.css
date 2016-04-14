@@ -2,6 +2,21 @@ html, body {
 	height: 100%;
 }
 
+/*main*/
+
+.header {
+	font-size: 80px;
+}
+
+.sub-head {
+	font-size: 40px;
+}
+
+.mp-btn {
+	height: 60px;
+	font-size: 25px;
+}
+
 .puzzle-down {
 	display: block;
 }
@@ -16,4 +31,51 @@ html, body {
 
 .odd-puzzle-btns {
 	display: none;
+}
+
+/*all games*/
+
+.back-btn {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.wrong-answer {
+	width: 80%;
+	font-size: 25px;
+}
+
+.correct-answer {
+	font-size: 25px;
+}
+
+.score-info {
+	font-size: 25px;
+}
+
+/*math*/
+
+.number-squares {
+	font-size: 25px;
+}
+
+/*odd*/
+
+/*anagram*/
+
+.wrong-answer-anagram {
+	width: 60%;
+}
+
+.input-lg {
+	height: 60px;
+	font-size: 25px;
+}
+
+.skip-btn {
+	font-size: 20px;
+}
+
+.anagram-btns {
+	font-size: 20px;
 }

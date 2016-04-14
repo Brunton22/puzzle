@@ -121,7 +121,7 @@ angular.module('oddCtrl', []).controller('oddController', ['$scope', '$timeout',
 		else {
 
 			$scope.alert = 'Incorrect Answer. Game Over!';
-			$scope.wrong_answer = 'dynamicshow';
+			$scope.wrong_answer = 'dynamicshow jello';
 			$timeout.cancel(mytimeout);
 			$scope.IsClickEnable = false;
 		}

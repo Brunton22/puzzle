@@ -16,17 +16,18 @@ html, body {
 	margin-top: 30px;
 	font-size: 18px;
 	border-radius: 40px;
-	min-width: 375px;
 }
 
 .navbar-nav {
 	margin: 0;
+	display: flex;
 }
 
 .menu-title {
 	font-family: 'Shadows Into Light', cursive;
 	color: white;
-	margin-top: 15px; 
+	margin-top: 10px; 
+	font-size: 20px;
 }
 
 .puzzle-down {
