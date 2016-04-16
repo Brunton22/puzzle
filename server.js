@@ -29,7 +29,6 @@ require('./app/routes')(app);
 
 //start app
 app.listen(port);
-console.log('Hello World');
 
 exports = module.exports = app;
 

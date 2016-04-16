@@ -120,7 +120,6 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 	$scope.give_up = function() {
 		$scope.wrong_answer_anagram = 'You Gave Up!';
 		$scope.wrong_answer = 'dynamicshow jello';
-		//$scope.score = 0;
 		$scope.disable = true;
 		$scope.rs_sum = $scope.sum;
 	}
