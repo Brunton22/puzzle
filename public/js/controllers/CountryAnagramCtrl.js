@@ -78,6 +78,7 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 		if ( $scope.formData == undefined ) {
 
 				$scope.wrong_answer = 'dynamicshow';
+				$scope.wrong_answer_anagram = "Wrong Answer. Game Over!";
 				$scope.score = 0;
 				$scope.disable = true;
 		}
