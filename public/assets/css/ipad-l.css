@@ -14,7 +14,7 @@ html, body {
 
 .mp-btn {
 	height: 60px;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .puzzle-down {
@@ -31,6 +31,10 @@ html, body {
 
 .odd-puzzle-btns {
 	display: none;
+}
+
+.btn-border {
+	background-color: #C0C0C0;
 }
 
 /*all games*/

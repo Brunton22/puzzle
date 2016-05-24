@@ -75,16 +75,15 @@ angular.module('CountryAnagramCtrl', []).controller('CountryAnagramController', 
 
 	$scope.check_answer = function() {
 
-		if ( $scope.formData == undefined ) {
+		if ( ($scope.formData == undefined) || ($scope.formData == '') ) {
 
-				$scope.wrong_answer = 'dynamicshow';
+				$scope.wrong_answer = 'dynamicshow jello';
 				$scope.wrong_answer_anagram = "Wrong Answer. Game Over!";
 				$scope.score = 0;
 				$scope.disable = true;
 		}
 
 		else {
-
 			var u_answer = $scope.formData.text;
 			var u_answer_check = u_answer.toLowerCase();
 			var r_country_check = $scope.sum.toLowerCase();

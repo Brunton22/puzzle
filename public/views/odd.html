@@ -5,7 +5,7 @@
     </div>
 </nav>
 <button ng-class='back_btn' ng-click='go_back()' class='btn btn-border ssp hvr-fade back-btn'>Back</button>
-<div ng-class='dynamichide' class='ssp jumbotron text-center main-bod'><span ng-class='hint_effect' class='animated display-block'>{{ hint }}</span></div>
+<div ng-class='dynamichide' class='ssp jumbotron text-center main-body'><span ng-class='hint_effect' class='animated display-block'>{{ hint }}</span></div>
 <div class='row ooo-squares'>
 	<div class='col-md-6 ssp number-squares' ng-click='!IsClickEnable||check_answer(odd)' ng-repeat='odd in ooo_game_arr'><span ng-class='odd_answer_effect' class='animated display-block'>{{ odd }}</span></div>
 </div>
