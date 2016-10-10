@@ -12,6 +12,10 @@ html, body {
 	height: 100%;
 }
 
+.body-container {
+	margin-top: 30px;
+}
+
 .main-body {
 	margin-top: 30px;
 	font-size: 18px;
@@ -67,7 +71,7 @@ html, body {
 }
 
 .mp-footer {
-	margin: auto;
+	margin: 20px 0 0 0;
 	font-size: 10px;
 }
 
